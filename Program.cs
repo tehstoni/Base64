@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Threading.Tasks;
-using System.Text;
-using System.Diagnostics.Contracts;
-using System.Xml;
+﻿using System.Text;
+
 
 namespace Base64
 {
@@ -40,7 +34,7 @@ namespace Base64
                     Console.WriteLine(encode(input));
                 } else if (args[0] == "-p")
                 {
-                    string pipe = Console.ReadLine();
+                    string pipe = Console.In.ReadToEnd();
                     if (pipe == null)
                     {
                         Console.WriteLine("No input");
